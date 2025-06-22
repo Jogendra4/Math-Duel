@@ -64,7 +64,7 @@
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        const socket = io();
+        const socket = io(window.location.origin);
         const LOBBY_SIZE = 2;
         let myUsername = '', currentLobbyId = null, quizQuestions = [], currentQuestionIndex = 0, myScore = 0;
         const screens = { login: document.getElementById('login-screen'), lobby: document.getElementById('lobby-screen'), quiz: document.getElementById('quiz-screen'), results: document.getElementById('results-screen') };
